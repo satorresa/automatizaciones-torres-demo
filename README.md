@@ -1,3 +1,5 @@
+EAUD-0031 añade enlaces por caso y una ficha local para empresas y agencias. La información permanece en el navegador hasta que el visitante decide compartirla. La carga de trabajo declarada no se presenta como ahorro. Consulta [Del ejemplo a una conversación concreta](docs/FIRST_WORKFLOW.md) para operación, límites y comprobaciones.
+
 # Automatizaciones Torres · demostraciones
 
 [Abrir demostración interactiva en español e inglés](https://torres-demostraciones.tunedrice6.chatgpt.site)
