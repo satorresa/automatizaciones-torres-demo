@@ -2,3 +2,11 @@ node_modules/
 .local/
 *.tar.gz
 .env*
+
+# Hosting metadata and QA wrappers are not public repository sources
+.openai/
+**/_qa*
+.env
+.env.*
+.dev.vars
+.dev.vars.*

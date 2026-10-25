@@ -2,7 +2,9 @@ EAUD-0031 añade enlaces por caso y una ficha local para empresas y agencias. La
 
 # Automatizaciones Torres · demostraciones
 
-[Abrir demostración interactiva en español e inglés](https://torres-demostraciones.tunedrice6.chatgpt.site)
+[Abrir demostración interactiva en español e inglés](https://demo.automatizacionestorres.com)
+
+[Sitio principal de Automatizaciones Torres](https://automatizacionestorres.com)
 
 Seis modelos funcionales para explorar decisiones de un proceso con casos completamente ficticios. El visitante puede cambiar entradas, observar diferencias y entender qué necesita la revisión de una persona. Son demostraciones construidas para este portfolio, no implantaciones de clientes ni resultados comerciales acreditados.
 
@@ -26,7 +28,7 @@ La API de [dist/models.mjs](dist/models.mjs) es independiente de la presentació
 Requiere una versión moderna de Node.js con el ejecutor de pruebas integrado. No necesita instalar dependencias para estos modelos.
 
 ```powershell
-node --test tests/models.test.mjs
+node --test tests/*.test.mjs
 ```
 
 Las pruebas cubren entradas inválidas, diferencias pendientes, aprobación expresa, reservas repetidas, dinero solo reportado, supresión e historial. Una respuesta o una reunión nunca se convierten en venta. Estas pruebas no certifican una integración ni sustituyen la revisión de la interfaz publicada.
@@ -47,9 +49,9 @@ Cada módulo devuelve objetos de datos. La interfaz debe representar las entrada
 
 ## English summary
 
-Explore the [live bilingual demonstration](https://torres-demostraciones.tunedrice6.chatgpt.site). Change fictional inputs, inspect the result and see which decision still needs a person. The six cases cover document review, order changes, stock reservations, equipment-service preparation, receipt comparison and commercial-contact checks.
+Explore the [live bilingual demonstration](https://demo.automatizacionestorres.com). Change fictional inputs, inspect the result and see which decision still needs a person. The six cases cover document review, order changes, stock reservations, equipment-service preparation, receipt comparison and commercial-contact checks.
 
-These are independent demonstrations with deterministic JavaScript rules and explicit human review. They contain no customer data, external AI service, real payment recognition, messaging or production integration. They do not establish client deployments or business results. Run `node --test tests/models.test.mjs` to check the models. The [demonstration contract](docs/DEMONSTRATION.md) describes the exact result shapes and boundaries.
+These are independent demonstrations with deterministic JavaScript rules and explicit human review. They contain no customer data, external AI service, real payment recognition, messaging or production integration. They do not establish client deployments or business results. Run `node --test tests/*.test.mjs` to check the models and briefs. The [demonstration contract](docs/DEMONSTRATION.md) describes the exact result shapes and boundaries.
 
 ## Derechos
 

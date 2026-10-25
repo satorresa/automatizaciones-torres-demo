@@ -1,5 +1,5 @@
 export const DEMO_IDS = Object.freeze(['packet','order','stock','equipment','receipt','opportunity']);
-export const DEMO_ORIGIN = 'https://torres-demostraciones.tunedrice6.chatgpt.site';
+export const DEMO_ORIGIN = 'https://demo.automatizacionestorres.com';
 export function readContext(search='') {
   const q=new URLSearchParams(search),raw=q.get('origen')||'';
   return {caseId:DEMO_IDS.includes(q.get('caso'))?q.get('caso'):'packet',language:q.get('idioma')==='en'?'en':'es',origin:/^[a-z0-9][a-z0-9_-]{0,39}$/.test(raw)?raw:''};
