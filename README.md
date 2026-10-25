@@ -1,57 +1,67 @@
-EAUD-0031 añade enlaces por caso y una ficha local para empresas y agencias. La información permanece en el navegador hasta que el visitante decide compartirla. La carga de trabajo declarada no se presenta como ahorro. Consulta [Del ejemplo a una conversación concreta](docs/FIRST_WORKFLOW.md) para operación, límites y comprobaciones.
+# Automatizaciones Torres
 
-# Automatizaciones Torres · demostraciones
+**6 demostraciones funcionales · Español / English**
 
-[Abrir demostración interactiva en español e inglés](https://demo.automatizacionestorres.com)
+Diseñamos sistemas para que un proceso pueda recorrerse de principio a fin, con reglas claras, excepciones visibles y aprobación humana donde corresponde.
 
-[Sitio principal de Automatizaciones Torres](https://automatizacionestorres.com)
+[Explorar las demostraciones](https://demo.automatizacionestorres.com) · [Conocer Automatizaciones Torres](https://automatizacionestorres.com)
 
-Seis modelos funcionales para explorar decisiones de un proceso con casos completamente ficticios. El visitante puede cambiar entradas, observar diferencias y entender qué necesita la revisión de una persona. Son demostraciones construidas para este portfolio, no implantaciones de clientes ni resultados comerciales acreditados.
+![Sistemas funcionales de Automatizaciones Torres](portfolio-v36/assets/portfolio-es.png)
 
-El sitio trabaja con reglas deterministas en el navegador. No contiene un modelo de IA externo, backend de operación, autenticación productiva, conexión bancaria o transporte de correo. Una acción simulada no reserva existencias, confirma dinero ni contacta personas en sistemas reales.
+## Seis recorridos para probar
 
-## Recorridos
+Cada demostración permite cambiar entradas y observar una decisión. Los datos son ficticios y las reglas se ejecutan en el navegador; no representan implantaciones de clientes ni resultados comerciales acreditados.
 
-| Demostración | Decisión visible |
+| Recorrido / Workflow | Qué permite comprobar / What you can test |
 |---|---|
-| Revisión documental | Periodo correcto, soporte presente y aprobación expresa antes de dar el expediente por preparado. |
-| Cambio de pedido | Diferencias de cantidad y acabado con autorización de la versión que irá a producción. |
-| Reserva de unidades | Existencias conocidas, compromisos, saldo e identificación de una reserva ya registrada. |
-| Preparación de servicio | Identificación del equipo, autorización y documento que permite preparar la atención. |
-| Revisión de un abono | Correspondencia de importe y referencia con revisión humana, sin reconocer ingresos reales. |
-| Contexto comercial | Fuente, buzón e historial separados de aprobación, acuse y reunión. |
+| Expedientes / Document packets | Periodo, soporte adjunto y aprobación antes de avanzar. / Period, attachment and approval checks before proceeding. |
+| Cambios de pedido / Order changes | Diferencias respecto de una base y autorización para producción. / Baseline differences and production approval. |
+| Existencias / Inventory | Disponibilidad, cantidades comprometidas y reserva sin duplicación. / Availability, committed units and a reservation that cannot be repeated. |
+| Equipos / Equipment intake | Identificación, autorización y soporte para revisar un servicio. / Identification, authorization and evidence for service review. |
+| Abonos / Receipts | Diferencias y referencia antes de conciliar; el modelo no reconoce ingresos. / Differences and reference checks before reconciliation; the model recognizes no income. |
+| Seguimiento comercial / Commercial follow-up | Fuente, canal, historial, supresión y aprobación antes de avanzar. / Source, channel, history, suppression and approval checks. |
 
-La API de [dist/models.mjs](dist/models.mjs) es independiente de la presentación. [Contrato y límites](docs/DEMONSTRATION.md) explica cada resultado y sus claves de traducción. No se incluyen datos, documentos o conexiones de otra operación.
+También se puede preparar una ficha local de un proceso. La información permanece en el navegador hasta que la persona decide compartirla; modificar la ficha invalida la versión generada. El volumen de tareas declarado es una entrada para conversar, no ahorro demostrado. Consulta la [guía del recorrido](docs/FIRST_WORKFLOW.md) y los [límites de las demostraciones](docs/DEMONSTRATION.md).
 
-## Comprobar
+Ninguna acción de estos modelos mueve inventario, confirma dinero, envía correos, crea citas o contacta personas en un sistema real. No hay un servicio de IA externo o un backend operativo conectado a las seis simulaciones.
 
-Requiere una versión moderna de Node.js con el ejecutor de pruebas integrado. No necesita instalar dependencias para estos modelos.
+## Portafolio en español e inglés
 
-```powershell
-node --test tests/*.test.mjs
-```
+El dossier reúne nueve casos de distinto alcance: seis demostraciones con datos ficticios, una propuesta sectorial y dos productos propios. Esa clasificación se mantiene en las imágenes y los documentos; no equivale a nueve clientes ni a nueve implementaciones en una plataforma determinada.
 
-Las pruebas cubren entradas inválidas, diferencias pendientes, aprobación expresa, reservas repetidas, dinero solo reportado, supresión e historial. Una respuesta o una reunión nunca se convierten en venta. Estas pruebas no certifican una integración ni sustituyen la revisión de la interfaz publicada.
+[Leer el dossier en español (PDF)](portfolio-v36/dossier/Automatizaciones_Torres_Portafolio_ES.pdf) · [Read the English portfolio (PDF)](portfolio-v36/dossier/Automatizaciones_Torres_Portafolio_EN.pdf)
 
-La carpeta `dist` se sirve como sitio estático, sin un servidor de negocio. Para una revisión local, si Python está disponible:
+Los [recursos del portafolio](portfolio-v36/manifest.json) incluyen portadas en ambos idiomas, marca, paleta y un inventario SHA-256. Las propuestas de medida son criterios para una futura prueba; no son ROI, ingresos o ahorros de clientes.
 
-```powershell
+## Ejecutar y comprobar
+
+Sirve la carpeta estática desde un entorno con Python instalado:
+
+~~~sh
 python -m http.server 4185 --bind 127.0.0.1 --directory dist
-```
+~~~
 
-Abrir `http://127.0.0.1:4185` en el canal de navegador autorizado. El servidor solo facilita la vista previa de archivos. No habilita los servicios que la demostración representa.
+Abre http://127.0.0.1:4185. Los modelos y la ficha funcionan localmente con los archivos incluidos; no necesitan una cuenta, un servicio externo de IA o analítica activa.
 
-## Alcance de la información
+Con Node.js, ejecuta las pruebas de los modelos y de la ficha:
 
-Los datos se generan para el ejemplo. Un importe o una cantidad no se presenta como cifra de un negocio real. Las reglas ilustran preparación y control de un recorrido y no emiten decisiones jurídicas, médicas, de seguridad, crédito o cumplimiento. La reserva repetida usa un indicador explícito de la simulación; una implementación real necesitaría persistencia y verificación de identidad de esa reserva en el servidor.
+~~~sh
+node --test tests/*.test.mjs
+~~~
 
-Cada módulo devuelve objetos de datos. La interfaz debe representar las entradas de texto con `textContent` o un escape equivalente y mantener visibles los estados pendientes. No se interpretan HTML o instrucciones proporcionados por el visitante. La auditoría de procedencia de ideas y los contextos de trabajo que motivaron estas demostraciones se mantienen fuera del repositorio público.
+Son 38 pruebas locales de reglas, límites, aprobación, idempotencia y edición de la ficha. No requieren instalar dependencias ni contactar servicios externos. Las licencias OFL de las fuentes incluidas se conservan en [dist/assets/fonts](dist/assets/fonts).
 
-## English summary
+## Analítica opcional
 
-Explore the [live bilingual demonstration](https://demo.automatizacionestorres.com). Change fictional inputs, inspect the result and see which decision still needs a person. The six cases cover document review, order changes, stock reservations, equipment-service preparation, receipt comparison and commercial-contact checks.
+La publicación utiliza el ID público GA4 G-GGMRJRJKQF. El módulo sólo permite analítica en los dominios públicos HTTPS admitidos y después de aceptar expresamente. En localhost, otros hosts o sin consentimiento, las funciones siguen disponibles sin cargar Google ni enviar los eventos de uso. Rechazar o retirar el permiso mantiene las demostraciones operativas; no se acumulan acciones anteriores para enviarlas después.
 
-These are independent demonstrations with deterministic JavaScript rules and explicit human review. They contain no customer data, external AI service, real payment recognition, messaging or production integration. They do not establish client deployments or business results. Run `node --test tests/*.test.mjs` to check the models and briefs. The [demonstration contract](docs/DEMONSTRATION.md) describes the exact result shapes and boundaries.
+El contrato usa categorías cerradas y URLs raíz canónicas. No recoge el contenido de formularios o fichas, correo, teléfono, empresa, documentos, tokens o identificadores de caso, ni une GA4 con registros comerciales. Google Signals, personalización publicitaria y consentimiento publicitario están desactivados. Un clic de contacto describe intención de abrir un canal; no prueba envío, lectura, respuesta o venta. La configuración del código por sí sola tampoco demuestra recepción en GA4.
+
+## English
+
+Automatizaciones Torres builds functional systems around an entire operational workflow. This repository contains six interactive, deterministic demonstrations with fictional data and explicit human approval controls. Change an input to inspect the resulting decision, then describe a process in a locally generated brief.
+
+[Open the bilingual demonstration](https://demo.automatizacionestorres.com) or [read the English portfolio](portfolio-v36/dossier/Automatizaciones_Torres_Portafolio_EN.pdf). The extended portfolio distinguishes six demonstrations, one sector proposal and two own products. It makes no claim of client deployment, Shopify delivery, revenue or measured savings. The static models work locally without tracking; optional production analytics requires consent and excludes form contents and personal or operational identifiers.
 
 ## Derechos
 

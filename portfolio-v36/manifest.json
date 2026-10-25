@@ -1,0 +1,265 @@
+{
+  "schema_version": "public-portfolio-assets-v1",
+  "brand": "Automatizaciones Torres",
+  "visual_edition": "Wine and matte gold",
+  "case_count": 9,
+  "interactive_models": 6,
+  "case_states": {
+    "fictional_functional_demonstrations": 6,
+    "documented_sector_proposal": 1,
+    "own_products": 2
+  },
+  "counts": {
+    "cover_png": 20,
+    "cover_svg": 20,
+    "brand_svg": 3,
+    "pdf": 2
+  },
+  "content_boundaries": [
+    "Fictional data where stated.",
+    "No client implementation, revenue, savings or Shopify delivery attributed.",
+    "Own-product diagrams omit operational and customer records."
+  ],
+  "rights": "All rights reserved by Automatizaciones Torres. Included fonts retain their existing OFL notices. No new license granted.",
+  "files": [
+    {
+      "file": "assets/commercial_system-en.png",
+      "bytes": 116432,
+      "sha256": "4a998748a0befe46e9aaecd18966404e8b250d41531dc30fbbfc1b1c69073388"
+    },
+    {
+      "file": "assets/commercial_system-en.svg",
+      "bytes": 176406,
+      "sha256": "8667c4cc6c6128ae42fc31e93afbf3a95de23dfa9cfe8292283693500fee170a"
+    },
+    {
+      "file": "assets/commercial_system-es.png",
+      "bytes": 120683,
+      "sha256": "0d85639bad805aad66ecbe742913ad7c685711791634c3eccfb64ad903ec2a33"
+    },
+    {
+      "file": "assets/commercial_system-es.svg",
+      "bytes": 195699,
+      "sha256": "5a0f4c8a334bbeb5f18e21098253a9ada9dbad42dc105f6c8eb5381693759708"
+    },
+    {
+      "file": "assets/equipment-en.png",
+      "bytes": 116263,
+      "sha256": "736e4899f1dde16c5c79c2783805d59f40225e0f057e638377ba3a032083bf8f"
+    },
+    {
+      "file": "assets/equipment-en.svg",
+      "bytes": 187920,
+      "sha256": "9f8afaa63f4a0e313928d54054de992f5a259684ad83064e97820b8b7d29f2ab"
+    },
+    {
+      "file": "assets/equipment-es.png",
+      "bytes": 119741,
+      "sha256": "c51a10ad3e3ecc59afeeec4167c5bc5c4e1bc446d9ae34a91ce1575ec8e47d02"
+    },
+    {
+      "file": "assets/equipment-es.svg",
+      "bytes": 192612,
+      "sha256": "fdbb9eb4af4089ee328b1ba0b2afd6d00d720bdf100c497e12b7272f9c6b056a"
+    },
+    {
+      "file": "assets/intake-en.png",
+      "bytes": 101243,
+      "sha256": "d8fb7a4b173fa66c5813c8b671cc29c4f72a8423402395dbd1dba2c182f379c7"
+    },
+    {
+      "file": "assets/intake-en.svg",
+      "bytes": 147116,
+      "sha256": "3958a6abc29fe43ec375620338e5d27876960eeac9331a0f6792468c5a89306a"
+    },
+    {
+      "file": "assets/intake-es.png",
+      "bytes": 122246,
+      "sha256": "adbf650481356f83cc4935e02950fd9b43794b56d2197a93ced4603f74f5a7df"
+    },
+    {
+      "file": "assets/intake-es.svg",
+      "bytes": 189702,
+      "sha256": "c87d86cb678d51d07e9a05000de92ca0df2597086390303ea3cf8b19cc9ea518"
+    },
+    {
+      "file": "assets/mining-en.png",
+      "bytes": 118744,
+      "sha256": "c997ee27ac914e688082e9a7038ca6156bc00e4815f5923b224219ecdffa0260"
+    },
+    {
+      "file": "assets/mining-en.svg",
+      "bytes": 195503,
+      "sha256": "0d27efb50130074585f6f79b2bae46ea536399682a82e80a2a3f0575f03f5552"
+    },
+    {
+      "file": "assets/mining-es.png",
+      "bytes": 116000,
+      "sha256": "ef7b5e7090e7ffcbb7a0888f26f1f596aca722667b22e93a5014840a1b319d3c"
+    },
+    {
+      "file": "assets/mining-es.svg",
+      "bytes": 199036,
+      "sha256": "0ce9b2bfcb583bc89739abada3cf1ea818fad9d2d7280715c00bef7381678dda"
+    },
+    {
+      "file": "assets/opportunity-en.png",
+      "bytes": 126877,
+      "sha256": "63a6690b740adf8a009e9625dc9e2383a2b1a8751c2a418b457da5d2044f8019"
+    },
+    {
+      "file": "assets/opportunity-en.svg",
+      "bytes": 168427,
+      "sha256": "649c2c559e15a60681c72dd50d167ff5e4c7f4932aba7cdb4952ad635417dcec"
+    },
+    {
+      "file": "assets/opportunity-es.png",
+      "bytes": 119371,
+      "sha256": "3aa7e2635f1e2cbc3aa300203e207222e949497d184b3c725cc3eacf25a20b53"
+    },
+    {
+      "file": "assets/opportunity-es.svg",
+      "bytes": 174467,
+      "sha256": "5298d44bcfc945ab8dba3b1235ca24eeae2707eda6dc0d4c04e7a0dee8b94f27"
+    },
+    {
+      "file": "assets/order-en.png",
+      "bytes": 102235,
+      "sha256": "02d3b692ef6262385bf3b65e618e141cc4ced14882156c7fb66b98acbcb4f653"
+    },
+    {
+      "file": "assets/order-en.svg",
+      "bytes": 156613,
+      "sha256": "48ceafa24c873f8582c3aa56c6d7ae43241c144607e64ce942675ffcda2c0f45"
+    },
+    {
+      "file": "assets/order-es.png",
+      "bytes": 111329,
+      "sha256": "800c8af311e942b392ea03790a6dbf11c36ed33dbef55ce827a3a178a2026ba4"
+    },
+    {
+      "file": "assets/order-es.svg",
+      "bytes": 173897,
+      "sha256": "dcdfc9a13fc0997ec0370c0484dd362de9d83c928947cf3c1cc05afea9c283bd"
+    },
+    {
+      "file": "assets/packet-en.png",
+      "bytes": 108599,
+      "sha256": "18d661fc841886806b31375d4469dfe0ae3b5cc510bb56e790f92134e5574db0"
+    },
+    {
+      "file": "assets/packet-en.svg",
+      "bytes": 141613,
+      "sha256": "33235e13916d1e52c343ec6c6d7442594b94ac8138b97c70b3becb86b2195f78"
+    },
+    {
+      "file": "assets/packet-es.png",
+      "bytes": 118847,
+      "sha256": "96352754d28284ab4386bd899c456b83e4ddb21445bc9d450e3276801f2dad64"
+    },
+    {
+      "file": "assets/packet-es.svg",
+      "bytes": 170867,
+      "sha256": "9a9d7f423c0fa0752b4ca50b3e2ebc4124cfbe3757085c7211e7a6cefa187c25"
+    },
+    {
+      "file": "assets/portfolio-en.png",
+      "bytes": 135289,
+      "sha256": "b43a0a2e5c3fafe864f0c72bc8a57805e5db61b4d1d193079aee5e3c11151ee5"
+    },
+    {
+      "file": "assets/portfolio-en.svg",
+      "bytes": 268903,
+      "sha256": "011552863f6947d12edf1f43aca989957b8eb8cde9894d488b7c541b8d596aaa"
+    },
+    {
+      "file": "assets/portfolio-es.png",
+      "bytes": 137624,
+      "sha256": "98087edad09f7a8a56e27d1920ae1d6f780ce535b72a0942f7827ae16e46aad6"
+    },
+    {
+      "file": "assets/portfolio-es.svg",
+      "bytes": 312245,
+      "sha256": "c68b1af989a0a2cfe4561eb3cecc97f9df21027e6998b32e8971b4811d5f0d42"
+    },
+    {
+      "file": "assets/receipt-en.png",
+      "bytes": 120847,
+      "sha256": "36993f6ea229cc25068d5d3f776d905601c099d5c327c57c41f7e8e936b8759f"
+    },
+    {
+      "file": "assets/receipt-en.svg",
+      "bytes": 169663,
+      "sha256": "8dc8492e6925aa0906752add7d24c198d93b6bf2047f3f186b9d52b7f8c7dccd"
+    },
+    {
+      "file": "assets/receipt-es.png",
+      "bytes": 125995,
+      "sha256": "2cce3c0c81dcbb599a2de928d1c50c51279461963409f9c21b224f98b01a6480"
+    },
+    {
+      "file": "assets/receipt-es.svg",
+      "bytes": 187449,
+      "sha256": "0fecb01937b19e123f703c157064e6e82ffd0604b4c1f5782ea8523629c72b97"
+    },
+    {
+      "file": "assets/stock-en.png",
+      "bytes": 105463,
+      "sha256": "79110b18bca6c18ed1fa53077f635ab89f7ef50443e0146b4fc1afabb55187e7"
+    },
+    {
+      "file": "assets/stock-en.svg",
+      "bytes": 156261,
+      "sha256": "d175839957106a66b85dc4c2aba6fb045b21244a2278333679b1ce4e083a23b6"
+    },
+    {
+      "file": "assets/stock-es.png",
+      "bytes": 111509,
+      "sha256": "5445924c6d71b794d90624493790c90ce0a6a0bb681520e5c0e756c04554b153"
+    },
+    {
+      "file": "assets/stock-es.svg",
+      "bytes": 186544,
+      "sha256": "5972e5608d2a3e7560fddaacec457a828a3cbecdb2b8fac9c4a9f4e71930408e"
+    },
+    {
+      "file": "brand/at-mark.svg",
+      "bytes": 1482,
+      "sha256": "b7cb3a34f3a1a76bfcb4c1ae80a44818a4279aee7fde5140f2a0d660b2abca33"
+    },
+    {
+      "file": "brand/torres-wordmark.svg",
+      "bytes": 19299,
+      "sha256": "48416d7e693432ff88736e706c416fe31b7cffdcc7f245873c25d4809aa3b6ca"
+    },
+    {
+      "file": "brand/torres-wordmark-ivory.svg",
+      "bytes": 19282,
+      "sha256": "e3ee2cde1dc7d6bd4694604059c6bda7fe33f7a2956a02ca94c1388a5c594324"
+    },
+    {
+      "file": "dossier/Automatizaciones_Torres_Portafolio_ES.pdf",
+      "bytes": 1436532,
+      "sha256": "d1c047e8dff7d8a000731a95f19828be11761a123532b1e72d835d2e15b61c53"
+    },
+    {
+      "file": "dossier/Automatizaciones_Torres_Portafolio_EN.pdf",
+      "bytes": 1370085,
+      "sha256": "3ea76414c83b734ec79820e1b8aa88cac6afbf7658c497daef3e199a19301b73"
+    },
+    {
+      "file": "design-tokens.json",
+      "bytes": 756,
+      "sha256": "87a487c0a431117e7d5076e3d582256c2b4d14bfe4263d036714b357a33bc3f0"
+    },
+    {
+      "file": ".gitattributes",
+      "bytes": 115,
+      "sha256": "c9c0fb7edb52075aa43508bd451e740b06e1365a792a5fe11f88a191bfdee287"
+    }
+  ],
+  "font_license_notices": [
+    "../dist/assets/fonts/dm-sans-OFL.txt",
+    "../dist/assets/fonts/instrument-serif-OFL.txt"
+  ]
+}

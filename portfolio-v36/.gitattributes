@@ -1,0 +1,5 @@
+# Reviewed public binaries and SVG outlines retain exact bytes.
+*.pdf binary
+*.png binary
+*.svg -text
+*.json -text

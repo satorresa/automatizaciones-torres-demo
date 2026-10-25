@@ -1,0 +1,23 @@
+{
+  "direction": "Editorial wine and matte gold",
+  "palette": {
+    "wine": "#511D2B",
+    "dark_wine": "#34131D",
+    "matte_gold": "#B69762",
+    "ivory": "#F4EFE5",
+    "ink": "#25211F"
+  },
+  "fonts": {
+    "editorial": "Instrument Serif",
+    "reading": "DM Sans",
+    "license": "SIL OFL; notices preserved in ../dist/assets/fonts/dm-sans-OFL.txt and ../dist/assets/fonts/instrument-serif-OFL.txt"
+  },
+  "principles": [
+    "Continuous ivory paper and generous margins",
+    "Wine typography and precise operational diagrams",
+    "Matte gold reserved for quiet rules and accents",
+    "Typographic AT wordmark without rounded app tiles",
+    "No metallic gradients, fluorescent accents or reference-brand imagery"
+  ],
+  "content_change": false
+}
