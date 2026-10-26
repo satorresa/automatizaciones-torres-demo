@@ -2,8 +2,8 @@
 // Public web-stream ID verified by the coordinator in the native GA4 UI, 25 Oct 2026.
 export const DEFAULT_MEASUREMENT_ID = 'G-GGMRJRJKQF';
 const CONSENT_KEY='torres-analytics-consent-v1';
-const EXAMPLES=['packet','order','stock','equipment','receipt','opportunity'];
-const SECTIONS=['home','approach','intake','faq','contact','lab','brief','collaborate'];
+const EXAMPLES=['packet','order','stock','equipment','receipt','opportunity','evidence-workspace','document-consistency','order-operations','customer-order-portal','commerce-operations','transport-settlement','operations-product-design','commercial-operations','private-case-intake'];
+const SECTIONS=['home','approach','intake','faq','contact','lab','brief','collaborate','developments','case','simulation','result','principles'];
 const PLACEMENTS=['header','hero','footer','brief','collaborate'];
 const enumOf=values=>value=>values.includes(value);
 const language=enumOf(['es','en']);
@@ -29,6 +29,15 @@ const EVENT_RULES=Object.freeze({
 });
 const ORIGINS={main:'https://automatizacionestorres.com',demo:'https://demo.automatizacionestorres.com'};
 const HOSTS={main:['automatizacionestorres.com','www.automatizacionestorres.com'],demo:['demo.automatizacionestorres.com']};
+// Exact, public document paths only. These are not prefixes and never come from a visitor value.
+export const ANALYTICS_PATHS=Object.freeze({
+ main:Object.freeze(['/','/recorrido','/desarrollos','/conversemos','/en','/en/approach','/en/developments','/en/contact']),
+ demo:Object.freeze(['/','/en','/laboratorio','/en/lab','/expedientes','/en/document-review','/revision-documental','/en/document-consistency','/pedidos','/en/order-operations','/portal-de-pedidos','/en/customer-order-portal','/tienda-y-operacion','/en/commerce-operations','/transporte-y-liquidacion','/en/transport-settlement','/producto-financiero-operativo','/en/operations-product-design','/operacion-comercial','/en/commercial-operations','/recepcion-de-casos','/en/private-case-intake','/laboratorio/expedientes','/en/lab/document-review','/laboratorio/pedidos','/en/lab/order-changes','/laboratorio/inventario','/en/lab/inventory-availability','/laboratorio/equipos','/en/lab/equipment-service','/laboratorio/conciliacion','/en/lab/receipt-reconciliation','/laboratorio/seguimiento-comercial','/en/lab/commercial-follow-up'])
+});
+// Finite aliases for static-host directory redirects. Never strip arbitrary slashes or suffixes.
+const PATH_ALIASES=Object.freeze(Object.fromEntries(Object.entries(ANALYTICS_PATHS).map(([surface,paths])=>[
+ surface,Object.freeze(Object.fromEntries(paths.filter(path=>path!=='/').map(path=>[path+'/',path])))
+])));
 const TITLES={main:'Automatizaciones Torres - Business workflows',demo:'Automatizaciones Torres - Working demonstrations'};
 const DENIED={analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'};
 const GRANTED={...DENIED,analytics_storage:'granted'};
@@ -37,9 +46,17 @@ const outcome=(accepted,sent,reason)=>({accepted,sent,reason});
 export function validMeasurementId(value){
  return typeof value==='string'&&/^G-[A-Z0-9]{10}$/.test(value)&&!/^G-(?:X{10}|0{10})$/.test(value);
 }
-export function safePageLocation(_location,surface='main'){
- // The public applications have one permitted document route. Never inspect search/hash or a free path.
- return ORIGINS[surface] ? ORIGINS[surface]+'/' : '';
+export function safePageLocation(location,surface='main'){
+ const origin=ORIGINS[surface];if(!origin)return '';
+ try{
+  const href=typeof location==='string'?location:location?.href;
+  if(typeof href!=='string')return origin+'/';
+  const url=new URL(href);
+  if(url.protocol!=='https:'||url.username||url.password||url.port||!HOSTS[surface].includes(url.hostname))return origin+'/';
+  // Read only the pathname. Search, fragments, referrers and page text are never event parameters.
+  const canonical=ANALYTICS_PATHS[surface].includes(url.pathname)?url.pathname:Object.hasOwn(PATH_ALIASES[surface],url.pathname)?PATH_ALIASES[surface][url.pathname]:'/';
+  return origin+canonical;
+ }catch{return origin+'/';}
 }
 export function safeReferrer(){return '';}
 export function validateAnalyticsEvent(event,params={},surface='main',fallbackLanguage='es'){
@@ -74,7 +91,7 @@ export function createAnalyticsClient(environment={}){
   return 'unset';
  }
  function notify(){for(const listener of listeners)try{listener(consentGet());}catch{}}
- function allowedHost(){try{const url=new URL(getWindow()?.location?.href||'');return url.protocol==='https:'&&!url.username&&!url.password&&HOSTS[surface].includes(url.hostname);}catch{return false;}}
+ function allowedHost(){try{const url=new URL(getWindow()?.location?.href||'');return url.protocol==='https:'&&!url.username&&!url.password&&!url.port&&HOSTS[surface].includes(url.hostname);}catch{return false;}}
  function active(){return validMeasurementId(measurementId)&&consentGet()==='granted'&&allowedHost();}
  function command(...args){
   if(environment.dispatch){environment.dispatch(...args);return;}
@@ -111,7 +128,7 @@ export function createAnalyticsClient(environment={}){
   if(!active()||!ready)return false;
   const payload={};
   for(const key of Object.keys(safe))payload[key]=safe[key];
-  payload.page_location=safePageLocation(null,surface);payload.page_referrer='';payload.page_title=TITLES[surface];payload.send_to=measurementId;
+  payload.page_location=safePageLocation(getWindow()?.location,surface);payload.page_referrer='';payload.page_title=TITLES[surface];payload.send_to=measurementId;
   command('event',event,payload);return true;
  }
  function currentLanguage(){const value=getDocument()?.documentElement?.lang;return value==='en'?'en':'es';}
@@ -128,13 +145,13 @@ export function createAnalyticsClient(environment={}){
     command('js',new Date());
     command('config',id,{
      send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-     page_location:safePageLocation(null,surface),page_referrer:'',page_title:TITLES[surface],ignore_referrer:true,
+     page_location:safePageLocation(getWindow()?.location,surface),page_referrer:'',page_title:TITLES[surface],ignore_referrer:true,
      campaign_id:'not_set',campaign_source:'direct',campaign_medium:'none',campaign_name:'not_set',campaign_term:'not_set',campaign_content:'not_set',
      linker:{accept_incoming:false,domains:[],decorate_forms:false},
     });
     ready=true;loading=false;
-    // One sanitized manual pageview; no history listener or raw document URL.
-    track('page_view',{}, {dedupeKey:'page_view:'+surface});
+    // Initial consented view only. The demo explicitly records later navigations using in-memory keys.
+    track('page_view');
     for(const queued of pending.splice(0))emit(queued.event,queued.safe);
    }).catch(()=>{if(turn===generation){loading=false;ready=false;pending.length=0;}});
   }catch{loading=false;ready=false;pending.length=0;}
@@ -180,7 +197,9 @@ export function createAnalyticsClient(environment={}){
   if(!validMeasurementId(measurementId))return outcome(true,false,'measurement_unavailable');
   if(consentGet()!=='granted')return outcome(true,false,'consent_required');
   if(!allowedHost())return outcome(true,false,'non_public_environment');
-  const dedupe=event==='page_view'?'page_view:'+surface:key===undefined?null:event+'|'+key;
+  // Do not replay earlier routes or duplicate the initial view when navigation happens during tag load.
+  if(event==='page_view'&&!ready){ensureLoaded();return outcome(true,false,'loading');}
+  const dedupe=event==='page_view'&&key===undefined?'page_view:'+surface+':'+safePageLocation(getWindow()?.location,surface):key===undefined?null:event+'|'+key;
   if(dedupe&&seen.has(dedupe))return outcome(true,false,'duplicate');
   if(!ready&&pending.length>=30)return outcome(true,false,'loading_queue_full');
   if(dedupe){if(seen.size>=1000)return outcome(true,false,'dedupe_limit');seen.add(dedupe);}

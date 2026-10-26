@@ -6,8 +6,8 @@ import { track } from './analytics.mjs';
 export function mountPublicInteractions({surface,getLanguage,document:doc=document}) {
   const language=()=>getLanguage()==='en'?'en':'es';
   const selectors=surface==='main'
-    ? [['#inicio','home'],['#recorrido','approach'],['#case-intake','intake'],['#preguntas','faq'],['.site-footer','contact']]
-    : [['.hero','home'],['#laboratorio','lab'],['#brief-builder','brief'],['#criterio','approach'],['#colaborar','collaborate']];
+    ? [['#inicio','home'],['#recorrido','approach'],['#desarrollos','developments'],['.at38-principles','principles'],['#case-intake','intake'],['#preguntas','faq'],['.at38-footer','contact']]
+    : [['.hero','home'],['#desarrollos','developments'],['.principles','principles'],['.case-head','case'],['#probar','simulation'],['#resultado-del-desarrollo','result'],['#laboratorio','lab'],['#brief-builder','brief'],['#criterio','approach'],['#colaborar','collaborate']];
   const sections=selectors.map(([selector,id])=>({element:doc.querySelector(selector),id})).filter(x=>x.element);
   function measureVisible(){
     const height=doc.defaultView?.innerHeight||0;
@@ -29,7 +29,7 @@ export function mountPublicInteractions({surface,getLanguage,document:doc=docume
     if(surface==='main'&&href.startsWith('https://demo.automatizacionestorres.com'))track('demo_open',{ui_language:language()});
     const channel=href.startsWith('mailto:automatizaciones.storres@gmail.com')?'email':href.startsWith('https://wa.me/573105497003')?'whatsapp':null;
     if(!channel)return;
-    const placement=anchor.closest('header')?'header':anchor.closest('.site-footer,footer')?'footer':anchor.closest('#brief-builder')?'brief':anchor.closest('#colaborar')?'collaborate':anchor.closest('#inicio,.hero')?'hero':'brief';
+    const placement=anchor.closest('header')?'header':anchor.closest('.at38-footer,.site-footer,footer')?'footer':anchor.closest('#brief-builder')?'brief':anchor.closest('#colaborar')?'collaborate':anchor.closest('#inicio,.hero')?'hero':'brief';
     track('contact_intent',{channel,placement,ui_language:language()});
   }
   function focus(event){
@@ -38,7 +38,7 @@ export function mountPublicInteractions({surface,getLanguage,document:doc=docume
   }
   function toggle(event){
     const target=event.target;if(!(target instanceof HTMLDetailsElement)||!target.open)return;
-    const index=Array.from(doc.querySelectorAll('.questions-list details')).indexOf(target);
+    const index=Array.from(doc.querySelectorAll('.at38-questions details,.questions-list details')).indexOf(target);
     if(index>=0&&index<4)track('faq_open',{faq_id:index+1,ui_language:language()});
   }
   doc.addEventListener('click',click);doc.addEventListener('focusin',focus);doc.addEventListener('toggle',toggle,true);

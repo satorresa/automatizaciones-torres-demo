@@ -1,0 +1,713 @@
+{
+  "schema": "torres-featured-developments-v1",
+  "heading": {
+    "es": "Desarrollos destacados",
+    "en": "Featured developments"
+  },
+  "presentation": {
+    "es": "Sistemas que conectan lo que llega con la decisión y el siguiente paso.",
+    "en": "Systems that connect incoming work to a decision and the next step."
+  },
+  "publicationRules": {
+    "syntheticDemonstrations": true,
+    "realClientNames": false,
+    "realRecords": false,
+    "claimedClientROI": false,
+    "newDemosAlreadyBuilt": false
+  },
+  "cases": [
+    {
+      "id": "evidence-workspace",
+      "routes": {
+        "es": "/expedientes",
+        "en": "/en/document-review"
+      },
+      "title": {
+        "es": "De la obligación al expediente revisado",
+        "en": "From an obligation to a reviewed evidence record"
+      },
+      "category": {
+        "es": "Gestión documental y operación",
+        "en": "Document and operations management"
+      },
+      "status": {
+        "type": "functional_application",
+        "es": "Aplicación funcional desarrollada",
+        "en": "Functional application built"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Una entrega debe responder a una obligación, un periodo y una versión concreta. El reto fue conservar esa relación cuando llegan correcciones, observaciones o documentos que sólo cubren una parte de lo solicitado.",
+        "en": "A submission must answer a specific obligation, period and version. The challenge was to preserve that relationship when corrections, review comments or partly relevant documents arrive."
+      },
+      "built": {
+        "es": "Se desarrolló un espacio con obligaciones versionadas, entregas, análisis con citas, revisión por responsable y expedientes reproducibles. Los roles limitan lo que cada persona puede ver o decidir; cerrar y reabrir un expediente conserva la fotografía anterior.",
+        "en": "A workspace was built around versioned obligations, submissions, source-linked analysis, responsible review and reproducible case records. Roles limit what each person can see or decide; closing and reopening a record preserves the earlier snapshot."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: una obligación, el periodo y el documento entregado.",
+          "en": "Input: an obligation, its period and the submitted document."
+        },
+        {
+          "es": "Reglas: conservar versión, origen y permisos; señalar qué afirmaciones tienen soporte y cuáles quedan pendientes.",
+          "en": "Rules: retain version, origin and permissions; distinguish supported statements from pending items."
+        },
+        {
+          "es": "Decisión: el revisor observa, acepta o pide una corrección con su motivo.",
+          "en": "Decision: the reviewer comments, accepts or requests a correction with a reason."
+        },
+        {
+          "es": "Salida: historial y expediente con los documentos y decisiones que sustentan el cierre.",
+          "en": "Output: history and a case record containing the documents and decisions supporting closure."
+        }
+      ],
+      "exception": {
+        "es": "Una revisión sobre una versión anterior se detiene. Corregir una entrega no borra la revisión previa ni convierte una declaración en evidencia de ejecución.",
+        "en": "A review against an outdated version is stopped. Correcting a submission does not erase the previous review or turn a declaration into evidence of completed work."
+      },
+      "humanDecision": {
+        "es": "La aceptación de la entrega y cualquier excepción pertenecen a una persona autorizada.",
+        "en": "Acceptance and any exception remain with an authorized person."
+      },
+      "evidencedResult": {
+        "es": "Recorridos documentados de carga, dos versiones, observación, control de acceso y cierre con reapertura. Son capacidades funcionales comprobadas, no una afirmación de adopción institucional.",
+        "en": "Documented flows cover upload, two versions, review comments, access controls and closure with reopening. These are verified functional capabilities, not a claim of institutional adoption."
+      },
+      "scope": {
+        "es": "La implementación funcional y la propuesta de integración institucional son hitos distintos. No se presenta como integración activa con un sistema institucional de aprobación o pagos.",
+        "en": "The functional implementation and the proposed institutional integration are separate milestones. It is not presented as a live integration with an institutional approval or payment system."
+      },
+      "measure": {
+        "es": "Medir tiempo de preparación y revisión por entrega, correcciones por falta de soporte y cobertura de citas. Sin ahorro cuantificado acreditado.",
+        "en": "Measure preparation and review time per submission, corrections caused by missing evidence and source coverage. No quantified saving is claimed."
+      },
+      "demo": {
+        "es": "Una entrega ficticia cambia de periodo y de versión. El visitante puede observarla, corregirla y comprobar que el cierre anterior permanece visible.",
+        "en": "A fictional submission changes period and version. Visitors can review it, correct it and verify that the earlier closure remains visible."
+      },
+      "screens": [
+        "obligation-and-current-version",
+        "review-with-evidence",
+        "closure-and-reopening"
+      ],
+      "workGroup": "evidence-platform"
+    },
+    {
+      "id": "document-consistency",
+      "routes": {
+        "es": "/revision-documental",
+        "en": "/en/document-consistency"
+      },
+      "title": {
+        "es": "Un soporte legible también necesita contexto",
+        "en": "A readable document still needs context"
+      },
+      "category": {
+        "es": "Revisión de soportes",
+        "en": "Supporting-document review"
+      },
+      "status": {
+        "type": "functional_module",
+        "es": "Módulo funcional desarrollado",
+        "en": "Functional module built"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Leer un PDF no basta para concluir que corresponde al caso. El reto fue separar legibilidad, identidad de referencia, periodo, fuente y decisión del revisor.",
+        "en": "Reading a PDF is not enough to conclude that it belongs to a case. The challenge was to separate readability, reference identity, period, source and the reviewer's decision."
+      },
+      "built": {
+        "es": "Se construyó un lector documental con verificaciones explícitas, referencias al soporte, reglas versionadas y revisión humana. La importación conserva el archivo de origen y su huella; el resultado distingue coherencia, diferencia y falta de información.",
+        "en": "A document reader was built with explicit checks, supporting references, versioned rules and human review. Import preserves the original file and its fingerprint; results distinguish consistency, mismatch and missing information."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: archivo importado y referencia que se necesita contrastar.",
+          "en": "Input: an imported file and the reference to be checked."
+        },
+        {
+          "es": "Reglas: localizar periodos e identidad, conservar procedencia y separar datos encontrados de datos ausentes.",
+          "en": "Rules: locate periods and identity, retain provenance and separate observed data from missing data."
+        },
+        {
+          "es": "Decisión: revisar diferencias y registrar una aclaración o la aceptación documental.",
+          "en": "Decision: review differences and record a clarification or document-level acceptance."
+        },
+        {
+          "es": "Salida: comprobaciones explicables, versión del soporte e historial de revisión.",
+          "en": "Output: explainable checks, document version and review history."
+        }
+      ],
+      "exception": {
+        "es": "Un periodo distinto o una identidad que no coincide obliga a pedir aclaración. Un archivo ilegible queda sin conclusión; un resultado vacío no prueba una deuda.",
+        "en": "A different period or mismatching identity requires clarification. An unreadable file remains inconclusive; an empty result does not prove a debt."
+      },
+      "humanDecision": {
+        "es": "El revisor conserva el criterio sobre suficiencia y vigencia. El lector no determina por sí solo cumplimiento legal o pago actual.",
+        "en": "The reviewer retains judgment over sufficiency and validity. The reader does not independently determine legal compliance or current payment."
+      },
+      "evidencedResult": {
+        "es": "La documentación y el código acreditan contraste documental, importación asistida, control por roles y casos históricos con resultados diferentes. Este módulo pertenece a la misma plataforma del caso de obligaciones.",
+        "en": "Documentation and code support document checks, assisted import, role controls and historical examples producing different outcomes. This module belongs to the same platform as the obligations case."
+      },
+      "scope": {
+        "es": "Obtener un certificado de un operador y revisarlo son acciones separadas. La conexión automática con proveedores externos no se anuncia como activa.",
+        "en": "Obtaining a certificate from a provider and reviewing it are separate actions. Automatic connections to external providers are not presented as active."
+      },
+      "measure": {
+        "es": "Medir tiempo por revisión, proporción de casos sin conclusión y motivos de aclaración; conservar una línea base antes de atribuir mejoras.",
+        "en": "Measure review time, the share of inconclusive cases and clarification reasons; retain a baseline before attributing improvements."
+      },
+      "demo": {
+        "es": "Comparar dos soportes ficticios, uno con periodo distinto y otro incompleto. Abrir la referencia que explica cada comprobación.",
+        "en": "Compare two fictional documents, one with a different period and one incomplete. Open the supporting reference for each check."
+      },
+      "screens": [
+        "reference-versus-extracted-period",
+        "checks-with-source",
+        "clarification-and-review"
+      ],
+      "workGroup": "evidence-platform"
+    },
+    {
+      "id": "order-operations",
+      "routes": {
+        "es": "/pedidos",
+        "en": "/en/order-operations"
+      },
+      "title": {
+        "es": "Un pedido, un intento, una historia",
+        "en": "One order, one attempt, one history"
+      },
+      "category": {
+        "es": "Operaciones y logística",
+        "en": "Operations and logistics"
+      },
+      "status": {
+        "type": "operational_application",
+        "es": "Aplicación operativa desarrollada",
+        "en": "Operational application built"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Un pedido recorre identidad, permisos, datos de entrega, disponibilidad y un proveedor externo. El reto fue permitir recuperaciones y reintentos sin perder la referencia de la operación ni crear duplicados.",
+        "en": "An order crosses identity, permissions, delivery data, availability and an external provider. The challenge was to support recovery and retries without losing the operation reference or creating duplicates."
+      },
+      "built": {
+        "es": "Se desarrolló un centro de pedidos con acceso por roles, registro de intentos, recibos y consulta de la misma operación desde sus interfaces. Los cambios de acceso y la recuperación de sesión se controlan por separado del procesamiento del pedido.",
+        "en": "An order center was built with role-based access, attempt records, receipts and a consistent operation view across its interfaces. Access changes and session recovery are controlled separately from order processing."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: solicitante autorizado, artículos y datos de entrega.",
+          "en": "Input: an authorized requester, items and delivery details."
+        },
+        {
+          "es": "Reglas: validar permisos y campos; asociar el intento a una referencia estable antes de procesar.",
+          "en": "Rules: validate permissions and fields; associate the attempt with a stable reference before processing."
+        },
+        {
+          "es": "Decisión: confirmar el registro o mantener un estado pendiente si no hay resultado verificable.",
+          "en": "Decision: confirm the record or preserve a pending state when no verifiable result exists."
+        },
+        {
+          "es": "Salida: orden e historial consultables, con recibo y estado del intento.",
+          "en": "Output: an inspectable order and history, with a receipt and attempt status."
+        }
+      ],
+      "exception": {
+        "es": "Si falla un permiso o el proveedor no confirma, el flujo conserva el motivo y evita tratar el reintento como una orden nueva. Una simulación se identifica como simulación.",
+        "en": "If a permission fails or the provider does not confirm, the flow retains the reason and avoids treating a retry as a new order. A simulation is identified as a simulation."
+      },
+      "humanDecision": {
+        "es": "La persona autorizada corrige el caso y decide el reintento. La demostración no crea despachos externos.",
+        "en": "The authorized person corrects the case and decides whether to retry. The demonstration creates no external shipment."
+      },
+      "evidencedResult": {
+        "es": "Se documentó aceptación en navegador con identidad real de operador, proveedor simulado, un recibo y la misma orden visible en dos interfaces. Esto acredita el recorrido controlado, no un despacho físico.",
+        "en": "Browser acceptance documented an actual operator identity, a simulated provider, a receipt and the same order visible in two interfaces. This supports the controlled workflow, not a physical shipment."
+      },
+      "scope": {
+        "es": "Los servicios operativos existen; la muestra pública es independiente, con datos ficticios y sin conexión al sistema original o a su proveedor.",
+        "en": "The operational services exist; the public sample is independent, uses fictional data and has no connection to the original system or its provider."
+      },
+      "measure": {
+        "es": "Medir duplicados evitados, casos pendientes de confirmación y tiempo para recuperar un intento. No se convierte una prueba técnica en mejora porcentual de operación.",
+        "en": "Measure prevented duplicates, unconfirmed cases and recovery time. A technical test is not converted into a percentage operational improvement."
+      },
+      "demo": {
+        "es": "Registrar un pedido ficticio, provocar un resultado incierto y consultar la misma referencia antes de reintentar.",
+        "en": "Record a fictional order, trigger an uncertain outcome and inspect the same reference before retrying."
+      },
+      "screens": [
+        "request-and-validation",
+        "attempt-receipt",
+        "uncertain-state-and-recovery"
+      ],
+      "workGroup": "order-ecosystem"
+    },
+    {
+      "id": "customer-order-portal",
+      "routes": {
+        "es": "/portal-de-pedidos",
+        "en": "/en/customer-order-portal"
+      },
+      "title": {
+        "es": "El cliente ve su pedido; el equipo conserva el control",
+        "en": "Customers see their order; the team keeps control"
+      },
+      "category": {
+        "es": "Portales B2B",
+        "en": "B2B portals"
+      },
+      "status": {
+        "type": "functional_portal",
+        "es": "Portal funcional desarrollado",
+        "en": "Functional portal built"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Un portal externo necesita mostrar al cliente su propia información y permitir cambios sin que una solicitud modifique silenciosamente la operación aprobada.",
+        "en": "An external portal must show customers their own information and allow change requests without silently altering an approved operation."
+      },
+      "built": {
+        "es": "Se implementaron solicitud, invitación, acceso aislado, consulta del pedido, documento descargable y solicitud de cancelación. El equipo resuelve la petición con revisión de versión; desactivar al cliente retira el acceso de su sesión.",
+        "en": "Request submission, invitation, isolated access, order inspection, a downloadable document and cancellation requests were implemented. Staff resolve requests with revision checks; deactivating a customer removes access from the active session."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: solicitud de pedido y acceso del cliente correspondiente.",
+          "en": "Input: an order request and access for the corresponding customer."
+        },
+        {
+          "es": "Reglas: aislar pedidos por cliente y conservar versión y estado del cambio solicitado.",
+          "en": "Rules: isolate orders by customer and retain the requested change's revision and state."
+        },
+        {
+          "es": "Decisión: el equipo acepta o rechaza la modificación tras revisar el estado actual.",
+          "en": "Decision: staff accept or reject the change after reviewing the current state."
+        },
+        {
+          "es": "Salida: pedido y resolución visibles para cliente y operación, sin perder la historia.",
+          "en": "Output: the order and resolution are visible to the customer and operations without losing history."
+        }
+      ],
+      "exception": {
+        "es": "Si otra acción cambió la versión, se pide refrescar antes de resolver. Cancelar una solicitud no se confunde con emitir una factura, liberar mercancía o ejecutar un pago.",
+        "en": "If another action changed the revision, the reviewer must refresh before resolving it. Cancelling a request is not confused with issuing an invoice, releasing goods or making a payment."
+      },
+      "humanDecision": {
+        "es": "La resolución operativa queda en manos del equipo autorizado. La sesión del cliente sólo accede a su propio recorrido.",
+        "en": "Operational resolution stays with authorized staff. The customer session can access only its own workflow."
+      },
+      "evidencedResult": {
+        "es": "Una aceptación controlada documentó invitación, acceso del cliente de prueba, descarga del pedido, cancelación y pérdida de acceso tras desactivarlo. Comparte ecosistema con el centro de pedidos, pero atiende otra persona y otro recorrido.",
+        "en": "Controlled acceptance documented invitation, test-customer access, order download, cancellation and loss of access after deactivation. It shares an ecosystem with the order center but serves a different person and workflow."
+      },
+      "scope": {
+        "es": "La muestra no publica datos, precios, marcas o reglas del sistema original. Tampoco afirma que un documento de pedido sea una factura contable.",
+        "en": "The sample publishes no data, prices, branding or rules from the original system. It does not present an order document as an accounting invoice."
+      },
+      "measure": {
+        "es": "Medir solicitudes que requieren intervención, conflictos de versión y tiempo de resolución. La aceptación técnica no es una encuesta real de satisfacción.",
+        "en": "Measure requests requiring intervention, revision conflicts and resolution time. Technical acceptance is not an actual satisfaction survey."
+      },
+      "demo": {
+        "es": "Alternar entre cliente y operación ficticios, pedir una cancelación y comprobar qué puede resolver cada rol.",
+        "en": "Switch between fictional customer and staff views, request cancellation and inspect what each role may resolve."
+      },
+      "screens": [
+        "customer-order-view",
+        "change-request-and-stale-revision",
+        "resolution-and-access-revocation"
+      ],
+      "workGroup": "order-ecosystem"
+    },
+    {
+      "id": "commerce-operations",
+      "routes": {
+        "es": "/tienda-y-operacion",
+        "en": "/en/commerce-operations"
+      },
+      "title": {
+        "es": "De la vitrina al pedido conciliado",
+        "en": "From the storefront to a reconciled order"
+      },
+      "category": {
+        "es": "Comercio y gestión",
+        "en": "Commerce and operations"
+      },
+      "status": {
+        "type": "published_application",
+        "es": "Tienda funcional publicada",
+        "en": "Functional storefront published"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "La tienda debía unir catálogo, pedido, aviso de pago y despacho sin tratar esas acciones como un solo estado. El negocio también necesitaba mantener contenido y operación desde un panel.",
+        "en": "The storefront needed to connect catalog, order, payment notification and fulfillment without treating them as a single state. The business also needed a panel for content and operations."
+      },
+      "built": {
+        "es": "Se desarrolló una tienda con catálogo, pedido, panel administrativo, conciliación manual, actividad y exportación. Los datos operativos se guardan en una base y las imágenes en almacenamiento de objetos; una hoja recibe una copia operativa saneada.",
+        "en": "A storefront was built with catalog, ordering, administration, manual reconciliation, activity and export. Operational data is stored in a database and images in object storage; a spreadsheet receives a sanitized operational copy."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: selección del producto y datos mínimos para el pedido.",
+          "en": "Input: product selection and the minimum order details."
+        },
+        {
+          "es": "Reglas: validar pedido, repetición y disponibilidad; separar el aviso del comprador de la confirmación administrativa.",
+          "en": "Rules: validate the order, retries and availability; separate the buyer's notification from administrative confirmation."
+        },
+        {
+          "es": "Decisión: administración contrasta el abono antes de confirmar pago y avanzar el despacho.",
+          "en": "Decision: administration checks the received funds before confirming payment and progressing fulfillment."
+        },
+        {
+          "es": "Salida: pedido con historial y estados de pago y despacho independientes.",
+          "en": "Output: an order with history and independent payment and fulfillment states."
+        }
+      ],
+      "exception": {
+        "es": "Adjuntar un soporte no marca el pedido como pagado. Un pago repetido, una cancelación o disponibilidad insuficiente requieren revisión antes de liberar el siguiente paso.",
+        "en": "Attaching evidence does not mark the order paid. A duplicate payment, cancellation or insufficient availability requires review before releasing the next step."
+      },
+      "humanDecision": {
+        "es": "El abono manual y el despacho se confirman por separado desde administración.",
+        "en": "The manual payment and fulfillment are confirmed separately by administration."
+      },
+      "evidencedResult": {
+        "es": "Hay aplicación publicada, API de catálogo, administración restringida y sincronización documentadas. El recorrido de pago disponible al corte verificado era manual; no se atribuyen ventas ni pagos reales a las pruebas.",
+        "en": "A published application, catalog API, restricted administration and synchronization are documented. The available payment workflow at the verified cut was manual; tests are not described as actual sales or payments."
+      },
+      "scope": {
+        "es": "No se presenta como checkout automático de tarjeta o banca. La exportación administrativa no se vende como una recuperación integral de base y archivos.",
+        "en": "It is not presented as automatic card or bank checkout. The administrative export is not described as complete database and file recovery."
+      },
+      "measure": {
+        "es": "Medir pedidos pendientes de conciliación, diferencias de inventario y tiempo entre revisión del abono y despacho. Sin conversión o ingresos inventados.",
+        "en": "Measure orders awaiting reconciliation, inventory differences and time between payment review and fulfillment. No invented conversion or revenue figures."
+      },
+      "demo": {
+        "es": "Un comprador ficticio reporta un pago. El administrador ve el soporte, conserva pendiente el estado y confirma sólo después de revisar.",
+        "en": "A fictional buyer reports a payment. The administrator inspects its evidence, retains the pending state and confirms only after review."
+      },
+      "screens": [
+        "catalog-and-order",
+        "reported-versus-confirmed-payment",
+        "separate-payment-and-fulfillment-history"
+      ],
+      "workGroup": "commerce-store"
+    },
+    {
+      "id": "transport-settlement",
+      "routes": {
+        "es": "/transporte-y-liquidacion",
+        "en": "/en/transport-settlement"
+      },
+      "title": {
+        "es": "Seguir un viaje hasta su liquidación",
+        "en": "Follow a trip through settlement review"
+      },
+      "category": {
+        "es": "Operación de materiales y transporte",
+        "en": "Materials and transport operations"
+      },
+      "status": {
+        "type": "functional_prototype",
+        "es": "Prototipo funcional y diseño operativo",
+        "en": "Functional prototype and workflow design"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Una operación acumula solicitud, remisión, cantidad recibida, anticipo, descuentos y soportes. El reto de diseño fue conservar la relación entre esas piezas hasta la revisión de la liquidación.",
+        "en": "An operation accumulates a request, delivery record, received quantity, advance, deductions and supporting records. The design challenge was to retain their relationship through settlement review."
+      },
+      "built": {
+        "es": "Se construyó un prototipo local con solicitud, remisión, anticipo, dos revisiones, comparación de diferencias y registro de factura y pago. Se documentó además un diseño más amplio de centros de costo, maquinaria y soportes.",
+        "en": "A local prototype was built around requests, delivery records, advances, two reviews, difference comparison and invoice and payment records. A broader design for cost centers, equipment and evidence was also documented."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: solicitud del viaje, material y referencia de entrega.",
+          "en": "Input: a trip request, material and delivery reference."
+        },
+        {
+          "es": "Reglas: enlazar soportes, cantidades, anticipos y ajustes sin volver a reconocer el mismo valor.",
+          "en": "Rules: link evidence, quantities, advances and adjustments without recognizing the same amount again."
+        },
+        {
+          "es": "Decisión: comparar dos revisiones y resolver cualquier diferencia antes de marcar la liquidación lista.",
+          "en": "Decision: compare two reviews and resolve any difference before marking the settlement ready."
+        },
+        {
+          "es": "Salida: recorrido trazable de la operación y una liquidación revisada dentro del prototipo.",
+          "en": "Output: an inspectable operation workflow and a reviewed settlement inside the prototype."
+        }
+      ],
+      "exception": {
+        "es": "Si faltan tiquetes, las cantidades difieren o los revisores no coinciden, el caso conserva el pendiente. Registrar un pago en el prototipo no mueve dinero.",
+        "en": "Missing tickets, quantity differences or disagreement between reviewers retain a pending state. Recording a payment in the prototype moves no funds."
+      },
+      "humanDecision": {
+        "es": "La diferencia la resuelve un responsable; las reglas documentadas no sustituyen aprobación financiera.",
+        "en": "A responsible person resolves the difference; documented rules do not replace financial approval."
+      },
+      "evidencedResult": {
+        "es": "La fuente contiene una interfaz interactiva con almacenamiento local y estos recorridos. El proyecto integral seguía como propuesta de implementación; el prototipo no acredita una operación conectada a contabilidad o bancos.",
+        "en": "The source contains an interactive interface with local storage and these workflows. The full project remained an implementation proposal; the prototype does not establish a live accounting or banking connection."
+      },
+      "scope": {
+        "es": "La demostración pública se reconstruye con datos y lógica independientes. Geología y laboratorio no forman parte de este caso. No se anuncian APIs contables o pagos automáticos activos.",
+        "en": "The public demonstration is rebuilt with independent data and logic. Geology and laboratory work are outside this case. No live accounting APIs or automatic payments are advertised."
+      },
+      "measure": {
+        "es": "Medir liquidaciones pendientes por soporte, diferencias entre revisiones y tiempo de cierre. Costo y caja no se presentan como utilidad.",
+        "en": "Measure settlements pending evidence, disagreements between reviews and closing time. Cost and cash are not described as profit."
+      },
+      "demo": {
+        "es": "Dos revisores ficticios proponen ajustes diferentes para un viaje. El visitante compara la diferencia y registra una resolución antes de avanzar.",
+        "en": "Two fictional reviewers propose different adjustments for a trip. Visitors compare the difference and record a resolution before proceeding."
+      },
+      "screens": [
+        "trip-evidence-and-advance",
+        "two-review-comparison",
+        "resolved-settlement-history"
+      ],
+      "workGroup": "transport-prototype"
+    },
+    {
+      "id": "operations-product-design",
+      "routes": {
+        "es": "/producto-financiero-operativo",
+        "en": "/en/operations-product-design"
+      },
+      "title": {
+        "es": "Un flujo repetible antes de una plataforma extensa",
+        "en": "A repeatable workflow before a large platform"
+      },
+      "category": {
+        "es": "Diseño de producto",
+        "en": "Product design"
+      },
+      "status": {
+        "type": "product_discovery",
+        "es": "Tesis de producto y validación documentadas",
+        "en": "Documented product thesis and validation plan"
+      },
+      "featured": false,
+      "challenge": {
+        "es": "Convertir un aprendizaje operativo en producto exige separar lo común, lo configurable y lo específico de cada negocio. El reto fue delimitar un primer recorrido que pudiera ponerse a prueba sin construir un ERP completo.",
+        "en": "Turning operational learning into a product requires separating shared, configurable and business-specific needs. The challenge was to define a first workflow that could be tested without building a complete ERP."
+      },
+      "built": {
+        "es": "Se documentaron tesis, arquitectura modular, paquete inicial y fichas de funcionalidad, entrevista y piloto. El enfoque propuesto concentra anticipos, soportes, liquidación y costos por operación, con reglas para evitar contabilizar dos veces.",
+        "en": "A thesis, modular architecture, initial package and feature, interview and pilot templates were documented. The proposed focus covers advances, evidence, settlement and cost per operation, with rules against double counting."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: una operación real que se necesita entender y sus soportes disponibles.",
+          "en": "Input: a real operation to understand and its available supporting records."
+        },
+        {
+          "es": "Reglas propuestas: separar anticipo, gasto reconocido, documento y pago; registrar origen y cobertura del dato.",
+          "en": "Proposed rules: separate advances, recognized costs, documents and payments; retain origin and data coverage."
+        },
+        {
+          "es": "Decisión: validar con un piloto qué reglas son compartidas y cuáles requieren configuración.",
+          "en": "Decision: use a pilot to validate which rules are shared and which require configuration."
+        },
+        {
+          "es": "Salida diseñada: pendientes por legalizar, costos por operación y evidencia para decidir si el producto se repite.",
+          "en": "Designed output: unsettled advances, costs per operation and evidence for deciding whether the product is repeatable."
+        }
+      ],
+      "exception": {
+        "es": "Si faltan ingresos atribuibles o costos compartidos, el diseño no llama rentabilidad a la diferencia de caja. Si cada piloto exige rehacer el sistema, se revisa la tesis.",
+        "en": "Without attributable income or shared costs, the design does not label a cash difference profitability. If every pilot requires rebuilding the system, the thesis is revisited."
+      },
+      "humanDecision": {
+        "es": "La necesidad, la disposición a pagar y la aceptación de cada piloto se validan con personas y compromisos observables.",
+        "en": "Need, willingness to pay and pilot acceptance are validated with people and observable commitments."
+      },
+      "evidencedResult": {
+        "es": "Existe el diseño y el método de validación. No hay producto construido, pilotos completados, suscripciones, retención o margen comprobados en las fuentes revisadas.",
+        "en": "The design and validation method exist. The reviewed sources establish no built product, completed pilots, subscriptions, retention or verified margin."
+      },
+      "scope": {
+        "es": "Se presenta como trabajo de diseño, separado de los desarrollos funcionales. No se heredan datos, código o derechos de un proyecto de terceros.",
+        "en": "It is presented as design work, separate from functional developments. No third-party project's data, code or rights are inherited."
+      },
+      "measure": {
+        "es": "Medir horas de puesta en marcha, soporte, reutilización y contribución efectiva después de costos. Los escenarios no son resultados.",
+        "en": "Measure setup hours, support, reuse and actual contribution after costs. Scenarios are not results."
+      },
+      "demo": {
+        "es": "Una simulación conceptual distingue anticipo, soporte, costo y pago de una operación ficticia. Debe llevar visible su estado de diseño.",
+        "en": "A conceptual simulation distinguishes advance, evidence, cost and payment for a fictional operation. Its design status must remain visible."
+      },
+      "screens": [
+        "operation-model-and-configurable-rules",
+        "advance-cost-payment-separation",
+        "pilot-measurement-plan"
+      ],
+      "workGroup": "product-discovery"
+    },
+    {
+      "id": "commercial-operations",
+      "routes": {
+        "es": "/operacion-comercial",
+        "en": "/en/commercial-operations"
+      },
+      "title": {
+        "es": "Seguir una oportunidad sin perder su historia",
+        "en": "Follow an opportunity without losing its history"
+      },
+      "category": {
+        "es": "Producto propio",
+        "en": "Own product"
+      },
+      "status": {
+        "type": "own_operational_product",
+        "es": "Sistema propio implementado",
+        "en": "Own operational system implemented"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Encontrar una empresa, revisar su contexto, preparar un mensaje y recibir una respuesta son momentos diferentes. El reto fue conservar evidencia e historial para saber qué ocurrió y qué acción sigue autorizada.",
+        "en": "Finding a company, reviewing its context, preparing a message and receiving a reply are separate moments. The challenge was to retain evidence and history so the team knows what happened and which next action is authorized."
+      },
+      "built": {
+        "es": "Se implementó una operación comercial privada que concilia registros y eventos, consulta historial, conserva supresiones y diferencia señales de demanda. La clasificación de una cuenta no sustituye la comprobación de canal ni la aprobación de un acercamiento.",
+        "en": "A private commercial system was implemented to reconcile records and events, inspect history, retain suppression and distinguish demand signals. Account classification does not replace channel checks or approval for outreach."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: fuente, contexto de la empresa y ruta de contacto que se investiga.",
+          "en": "Input: a source, company context and the contact route under investigation."
+        },
+        {
+          "es": "Reglas: revisar vigencia, rol, duplicados, historial y supresión antes de priorizar.",
+          "en": "Rules: check freshness, role, duplicates, history and suppression before prioritizing."
+        },
+        {
+          "es": "Decisión: una persona revisa el caso y el siguiente paso; una respuesta automática no se interpreta como interés de compra.",
+          "en": "Decision: a person reviews the case and next step; an automatic acknowledgment is not treated as buying interest."
+        },
+        {
+          "es": "Salida: expediente comercial con hechos, eventos y acciones pendientes de revisión.",
+          "en": "Output: a commercial record with facts, events and actions awaiting review."
+        }
+      ],
+      "exception": {
+        "es": "Un rebote bloquea el canal, un historial ambiguo pide revisión y una supresión se conserva. Un borrador no se cuenta como envío y un recibido no se convierte en venta.",
+        "en": "A bounce blocks the channel, ambiguous history requires review and suppression is retained. A draft is not counted as sent and acknowledgment is not converted into a sale."
+      },
+      "humanDecision": {
+        "es": "La pertinencia del mensaje y su autorización se revisan por caso. El sistema no tiene autoridad comercial autónoma.",
+        "en": "Message relevance and authorization are reviewed case by case. The system has no autonomous commercial authority."
+      },
+      "evidencedResult": {
+        "es": "El producto y sus reglas de conciliación están implementados. La muestra pública recrea el recorrido con cuentas ficticias y no expone contactos, mensajes o resultados comerciales reales.",
+        "en": "The product and its reconciliation rules are implemented. The public sample recreates the workflow with fictional accounts and exposes no actual contacts, messages or commercial outcomes."
+      },
+      "scope": {
+        "es": "Es un producto propio de operación, no una base de contactos a la venta ni una promesa de respuesta o cierre.",
+        "en": "It is an own operational product, not a contact database for sale or a promise of replies or closed deals."
+      },
+      "measure": {
+        "es": "Medir fuente, canal revisado, rechazo, respuesta humana, derivación, reunión, necesidad y propuesta como etapas distintas.",
+        "en": "Measure source, reviewed channel, rejection, human reply, referral, meeting, need and proposal as separate stages."
+      },
+      "demo": {
+        "es": "Comparar una solicitud explícita ficticia con un simple encaje comercial. Activar una supresión y ver por qué el siguiente paso queda bloqueado.",
+        "en": "Compare a fictional explicit request with simple commercial fit. Turn suppression on and inspect why the next action is blocked."
+      },
+      "screens": [
+        "source-and-context",
+        "history-and-suppression",
+        "next-step-with-evidence"
+      ],
+      "workGroup": "own-commercial-product"
+    },
+    {
+      "id": "private-case-intake",
+      "routes": {
+        "es": "/recepcion-de-casos",
+        "en": "/en/private-case-intake"
+      },
+      "title": {
+        "es": "Recibir un caso y conservar lo que se acordó",
+        "en": "Receive a case and retain what was agreed"
+      },
+      "category": {
+        "es": "Producto propio",
+        "en": "Own product"
+      },
+      "status": {
+        "type": "own_published_intake",
+        "es": "Recepción funcional publicada",
+        "en": "Functional intake published"
+      },
+      "featured": true,
+      "challenge": {
+        "es": "Un formulario no termina cuando se pulsa enviar. El reto fue conservar contexto, una muestra opcional y un estado consultable, incluso cuando la respuesta de red queda incierta.",
+        "en": "A form does not end when submit is pressed. The challenge was to retain context, an optional sample and an inspectable state, including when the network response is uncertain."
+      },
+      "built": {
+        "es": "Se construyó una recepción bilingüe con revisión previa, carga acotada, persistencia, archivo privado y recibo de consulta. El servidor valida origen, formato y repetición; el acceso administrativo se separa de la vista del visitante.",
+        "en": "A bilingual intake was built with pre-submission review, bounded upload, persistence, private files and a status receipt. The server validates origin, format and retries; administrative access is separate from the visitor view."
+      },
+      "workflow": [
+        {
+          "es": "Entrada: descripción del recorrido, contacto y muestra opcional que se tiene permiso de compartir.",
+          "en": "Input: a workflow description, contact details and an optional sample the visitor is permitted to share."
+        },
+        {
+          "es": "Reglas: comprobar tamaño y tipo, conservar recibo y no repetir el alta si el estado aún es incierto.",
+          "en": "Rules: check size and type, retain the receipt and avoid repeating creation while the state remains uncertain."
+        },
+        {
+          "es": "Decisión: el visitante revisa antes de enviar y el equipo autorizado revisa el expediente después.",
+          "en": "Decision: the visitor reviews before submission and authorized staff review the case afterward."
+        },
+        {
+          "es": "Salida: recepción confirmada y estado recuperable, con próximos pasos diferenciados.",
+          "en": "Output: confirmed receipt and recoverable status, with distinct next steps."
+        }
+      ],
+      "exception": {
+        "es": "Un timeout conserva la consulta de estado antes del reintento. Un archivo rechazado no se acepta silenciosamente y una reserva no se confirma sólo por iniciar su solicitud.",
+        "en": "A timeout preserves a status check before retrying. A rejected file is not silently accepted and a booking is not confirmed merely because its request began."
+      },
+      "humanDecision": {
+        "es": "Revisar el caso, contactar y acordar alcance siguen siendo tareas del equipo. La recepción no contrata una implementación.",
+        "en": "Reviewing the case, making contact and agreeing scope remain staff tasks. Receipt does not commission an implementation."
+      },
+      "evidencedResult": {
+        "es": "La recepción persistente se documentó con una prueba interna y un archivo controlado. Esa prueba no fue un lead o una venta. Correo, verificación y agenda se tratan como capacidades con configuración y aceptación independientes.",
+        "en": "Persistent receipt was documented with an internal test and a controlled file. That test was not a lead or sale. Email, verification and scheduling are treated as capabilities with separate configuration and acceptance."
+      },
+      "scope": {
+        "es": "La muestra pública usa un expediente ficticio. No crea envíos, correos o citas reales ni muestra tokens de un caso auténtico.",
+        "en": "The public sample uses a fictional case. It creates no actual submissions, emails or bookings and exposes no real-case tokens."
+      },
+      "measure": {
+        "es": "Medir inicio, revisión, intento, recepción confirmada y seguimiento como pasos distintos. No medir texto de formularios o información personal en analítica.",
+        "en": "Measure start, review, attempt, confirmed receipt and follow-up as separate steps. Do not measure form text or personal information in analytics."
+      },
+      "demo": {
+        "es": "Preparar un caso ficticio, simular una respuesta incierta y recuperar el estado antes de repetir. Una edición obliga a revisar de nuevo.",
+        "en": "Prepare a fictional case, simulate an uncertain response and recover its state before retrying. An edit requires a fresh review."
+      },
+      "screens": [
+        "review-before-submit",
+        "uncertain-and-status-recovery",
+        "private-receipt-and-next-step"
+      ],
+      "workGroup": "own-intake-product"
+    }
+  ]
+}

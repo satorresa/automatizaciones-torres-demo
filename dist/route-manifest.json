@@ -1,0 +1,240 @@
+{
+  "generatedFrom": "cases.json + routes.mjs",
+  "routes": [
+    {
+      "path": "/",
+      "view": "home",
+      "language": "es"
+    },
+    {
+      "path": "/en",
+      "view": "home",
+      "language": "en"
+    },
+    {
+      "path": "/laboratorio",
+      "view": "labIndex",
+      "language": "es"
+    },
+    {
+      "path": "/en/lab",
+      "view": "labIndex",
+      "language": "en"
+    },
+    {
+      "path": "/expedientes",
+      "view": "case",
+      "language": "es",
+      "caseId": "evidence-workspace"
+    },
+    {
+      "path": "/en/document-review",
+      "view": "case",
+      "language": "en",
+      "caseId": "evidence-workspace"
+    },
+    {
+      "path": "/revision-documental",
+      "view": "case",
+      "language": "es",
+      "caseId": "document-consistency"
+    },
+    {
+      "path": "/en/document-consistency",
+      "view": "case",
+      "language": "en",
+      "caseId": "document-consistency"
+    },
+    {
+      "path": "/pedidos",
+      "view": "case",
+      "language": "es",
+      "caseId": "order-operations"
+    },
+    {
+      "path": "/en/order-operations",
+      "view": "case",
+      "language": "en",
+      "caseId": "order-operations"
+    },
+    {
+      "path": "/portal-de-pedidos",
+      "view": "case",
+      "language": "es",
+      "caseId": "customer-order-portal"
+    },
+    {
+      "path": "/en/customer-order-portal",
+      "view": "case",
+      "language": "en",
+      "caseId": "customer-order-portal"
+    },
+    {
+      "path": "/tienda-y-operacion",
+      "view": "case",
+      "language": "es",
+      "caseId": "commerce-operations"
+    },
+    {
+      "path": "/en/commerce-operations",
+      "view": "case",
+      "language": "en",
+      "caseId": "commerce-operations"
+    },
+    {
+      "path": "/transporte-y-liquidacion",
+      "view": "case",
+      "language": "es",
+      "caseId": "transport-settlement"
+    },
+    {
+      "path": "/en/transport-settlement",
+      "view": "case",
+      "language": "en",
+      "caseId": "transport-settlement"
+    },
+    {
+      "path": "/producto-financiero-operativo",
+      "view": "case",
+      "language": "es",
+      "caseId": "operations-product-design"
+    },
+    {
+      "path": "/en/operations-product-design",
+      "view": "case",
+      "language": "en",
+      "caseId": "operations-product-design"
+    },
+    {
+      "path": "/operacion-comercial",
+      "view": "case",
+      "language": "es",
+      "caseId": "commercial-operations"
+    },
+    {
+      "path": "/en/commercial-operations",
+      "view": "case",
+      "language": "en",
+      "caseId": "commercial-operations"
+    },
+    {
+      "path": "/recepcion-de-casos",
+      "view": "case",
+      "language": "es",
+      "caseId": "private-case-intake"
+    },
+    {
+      "path": "/en/private-case-intake",
+      "view": "case",
+      "language": "en",
+      "caseId": "private-case-intake"
+    },
+    {
+      "path": "/laboratorio/expedientes",
+      "view": "lab",
+      "language": "es",
+      "legacyId": "packet"
+    },
+    {
+      "path": "/en/lab/document-review",
+      "view": "lab",
+      "language": "en",
+      "legacyId": "packet"
+    },
+    {
+      "path": "/laboratorio/pedidos",
+      "view": "lab",
+      "language": "es",
+      "legacyId": "order"
+    },
+    {
+      "path": "/en/lab/order-changes",
+      "view": "lab",
+      "language": "en",
+      "legacyId": "order"
+    },
+    {
+      "path": "/laboratorio/inventario",
+      "view": "lab",
+      "language": "es",
+      "legacyId": "stock"
+    },
+    {
+      "path": "/en/lab/inventory-availability",
+      "view": "lab",
+      "language": "en",
+      "legacyId": "stock"
+    },
+    {
+      "path": "/laboratorio/equipos",
+      "view": "lab",
+      "language": "es",
+      "legacyId": "equipment"
+    },
+    {
+      "path": "/en/lab/equipment-service",
+      "view": "lab",
+      "language": "en",
+      "legacyId": "equipment"
+    },
+    {
+      "path": "/laboratorio/conciliacion",
+      "view": "lab",
+      "language": "es",
+      "legacyId": "receipt"
+    },
+    {
+      "path": "/en/lab/receipt-reconciliation",
+      "view": "lab",
+      "language": "en",
+      "legacyId": "receipt"
+    },
+    {
+      "path": "/laboratorio/seguimiento-comercial",
+      "view": "lab",
+      "language": "es",
+      "legacyId": "opportunity"
+    },
+    {
+      "path": "/en/lab/commercial-follow-up",
+      "view": "lab",
+      "language": "en",
+      "legacyId": "opportunity"
+    }
+  ],
+  "generatedFiles": [
+    "/en/index.html",
+    "/laboratorio/index.html",
+    "/en/lab/index.html",
+    "/expedientes/index.html",
+    "/en/document-review/index.html",
+    "/revision-documental/index.html",
+    "/en/document-consistency/index.html",
+    "/pedidos/index.html",
+    "/en/order-operations/index.html",
+    "/portal-de-pedidos/index.html",
+    "/en/customer-order-portal/index.html",
+    "/tienda-y-operacion/index.html",
+    "/en/commerce-operations/index.html",
+    "/transporte-y-liquidacion/index.html",
+    "/en/transport-settlement/index.html",
+    "/producto-financiero-operativo/index.html",
+    "/en/operations-product-design/index.html",
+    "/operacion-comercial/index.html",
+    "/en/commercial-operations/index.html",
+    "/recepcion-de-casos/index.html",
+    "/en/private-case-intake/index.html",
+    "/laboratorio/expedientes/index.html",
+    "/en/lab/document-review/index.html",
+    "/laboratorio/pedidos/index.html",
+    "/en/lab/order-changes/index.html",
+    "/laboratorio/inventario/index.html",
+    "/en/lab/inventory-availability/index.html",
+    "/laboratorio/equipos/index.html",
+    "/en/lab/equipment-service/index.html",
+    "/laboratorio/conciliacion/index.html",
+    "/en/lab/receipt-reconciliation/index.html",
+    "/laboratorio/seguimiento-comercial/index.html",
+    "/en/lab/commercial-follow-up/index.html"
+  ]
+}

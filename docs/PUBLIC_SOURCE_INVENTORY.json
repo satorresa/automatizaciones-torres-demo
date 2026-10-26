@@ -1,0 +1,544 @@
+{
+  "edition": "Nine development stories and six rule labs",
+  "source_git_commit": "0d5a84f21efb4a4835fc18be730f59084f2293c9",
+  "scope": "Public static demonstration source; no hosting-provider identity, private provenance or operational records.",
+  "static_dist_files": 77,
+  "direct_routes": 34,
+  "included_source": [
+    {
+      "path": "dist/analytics.mjs",
+      "bytes": 20035,
+      "sha256": "afb0e7a3f474d9ac080d948dc4d50aaa64cb791a579e0048a809beeba2e9274d",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/app.mjs",
+      "bytes": 30782,
+      "sha256": "5f83b3cef45cec85719231920c34cd054163510fd07cf5adcbd642a98c479303",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/fonts/dm-sans-9fea608a.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/fonts/dm-sans-OFL.txt",
+      "bytes": 4390,
+      "sha256": "c6da9ab29436871bd4347b70607cf2fb2ab82a926a4afe84da0e7a02de4a189e",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/fonts/fonts.css",
+      "bytes": 1748,
+      "sha256": "d0310cbb51e5f0c4b4dc2e6bee8235b82afc25885ad300fda721fed4c02b4667",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/fonts/instrument-serif-5eb09b5a.woff2",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/fonts/instrument-serif-OFL.txt",
+      "bytes": 4406,
+      "sha256": "03a0d23feada968b189fe795a5bc9c90dfe1d6f8426d8fca078d4bc90cd53f30",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/mark.svg",
+      "bytes": 1482,
+      "sha256": "b7cb3a34f3a1a76bfcb4c1ae80a44818a4279aee7fde5140f2a0d660b2abca33",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/at-avatar-512.png",
+      "bytes": 9345,
+      "sha256": "c5dc05d91d14245b2579d4560b7ef8a50065200ac7326ad2e30b7059130b1275",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/at-mark.svg",
+      "bytes": 1482,
+      "sha256": "b7cb3a34f3a1a76bfcb4c1ae80a44818a4279aee7fde5140f2a0d660b2abca33",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/commerce-operations-en.webp",
+      "bytes": 29892,
+      "sha256": "b6627bf34aa20fd5ff239aea9489af7914b12725153eb799c13217952e01033a",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/commerce-operations-es.webp",
+      "bytes": 30018,
+      "sha256": "3dfaa0fe9065a47ac87a861c10d300003a2e85f25d5f0a03f1648479dacfd9d7",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/commercial-operations-en.webp",
+      "bytes": 17580,
+      "sha256": "340e526dbd967f0756a8fa946497d41cb767253cb21e316e6f25b2edf0853125",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/commercial-operations-es.webp",
+      "bytes": 17822,
+      "sha256": "f44c905a4c82bc66777227d417f15c174d1fc3ba2957461ff39efcf8f099d0c1",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/customer-order-portal-en.webp",
+      "bytes": 20274,
+      "sha256": "4e39c7170050c02c4fc89f72fcb698936627493f46543d3f92025cfbfc6da919",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/customer-order-portal-es.webp",
+      "bytes": 20988,
+      "sha256": "f84634c215302b6b5fe20b64f8cb834c9b2a0cb3f751f8deee50986c1fbbc346",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/document-consistency-en.webp",
+      "bytes": 22878,
+      "sha256": "1272b37ecdf77ff54bc0d4bb5d58a64f96a0b48b2ac049c1097418e5bb845050",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/document-consistency-es.webp",
+      "bytes": 25094,
+      "sha256": "906e8ed1bcf9b95f10a1c10603932639d6fdc3ee3d259aa5eef8e21eb8a031e9",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/evidence-workspace-en.webp",
+      "bytes": 20988,
+      "sha256": "2bf79036009f79cb7cb005956303b73979fa7f3b5bfbfe3a3d99ee82ccee6b50",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/evidence-workspace-es.webp",
+      "bytes": 22880,
+      "sha256": "802bcb20b216f23e630578dbcb765e1ee0208ce08bc31e5ed7b16d362ccf61b0",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/operations-product-design-en.webp",
+      "bytes": 30144,
+      "sha256": "e9ea48478f73d75ffd8c7fdfd87319363a76f1f1e816c6631ba7df7765b75582",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/operations-product-design-es.webp",
+      "bytes": 29590,
+      "sha256": "0e4589507946d39bcca1c0bb808d15a3123bfa8a9f012b3b0ebaff0b033da22f",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/order-operations-en.webp",
+      "bytes": 26338,
+      "sha256": "f71edc93c478592e3219e954844bb905fa5b4caf19cfd38f044d19b3b39841e5",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/order-operations-es.webp",
+      "bytes": 26392,
+      "sha256": "c16bf06dead3384e62e1e7117eb8f6f895e3197a098055023b9de0779ace846b",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/private-case-intake-en.webp",
+      "bytes": 24520,
+      "sha256": "62fc523ea379e1e49f96c66e4429bfa4fd7a952d15e24fe85b9c360677d9b0da",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/private-case-intake-es.webp",
+      "bytes": 26046,
+      "sha256": "8cd7b43c848283111b0402020d6ca226286832cf781fa13a14bc50b042ca6d0d",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/transport-settlement-en.webp",
+      "bytes": 26546,
+      "sha256": "528b585dbd4c857ad5982c64c820083ef5f5756bc9776831f0f757c5c510ed57",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/cases/transport-settlement-es.webp",
+      "bytes": 24852,
+      "sha256": "7a7150d06fc107a1fb4086d0207858fc6b8b6a9ef7bb4b451743b7f00241daea",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/assets/v38/hero-operations.webp",
+      "bytes": 92334,
+      "sha256": "9cf8f4c0b5247a2344e947ca53b4a214c3a49b0cae75b4cde7973947b9682410",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/brand.css",
+      "bytes": 20299,
+      "sha256": "f88ead4f397869ecde2710066c8662cf3cb5c94792752d4efc7128c9280e5f09",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/brief.css",
+      "bytes": 2710,
+      "sha256": "593ca9021ffc3cf1ed0e6942fb0e4a9d2eda40fdfe19a1d962f2849a9f74bac2",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/brief.mjs",
+      "bytes": 11350,
+      "sha256": "9c07eb194c611bf90a9468a9171c043896e11100624c3061bb4efff2a3bee2df",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/cases.json",
+      "bytes": 44769,
+      "sha256": "496f3d4a265c7ec1bca9724cd277f167651033c239f43b96bff934c74969d51a",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/editorial.css",
+      "bytes": 19106,
+      "sha256": "f7f04f828f57765bcfb6e300789cd8677be3395532c6e339cf5e3a4155e12729",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/commerce-operations/index.html",
+      "bytes": 1683,
+      "sha256": "143fc1398d0364924ec7a484a20c95bd6ade7ac98715d5c507327e4b8a729eca",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/commercial-operations/index.html",
+      "bytes": 1692,
+      "sha256": "ce6128b75c7d6be5bfdd36930947af9b8772934f103f56832a5c78d14d5e0984",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/customer-order-portal/index.html",
+      "bytes": 1693,
+      "sha256": "063bb2b8ffbfc8ade46799eb4bd0ef1b2a80d94d0cd1fd02dd4675af5d148c3e",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/document-consistency/index.html",
+      "bytes": 1682,
+      "sha256": "aa2d08326d2909592435bdf99b9ff91d7fbd98f7cb5af97b9e0837e4285b217a",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/document-review/index.html",
+      "bytes": 1686,
+      "sha256": "7a68a9ef0bbf9153d0b0f7974e06a64223a36e5684850ede5098da99899e4abc",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/index.html",
+      "bytes": 1643,
+      "sha256": "3bd601f373dba6c27edd0ab1cc67564397d07d5e69c5566fe0572b89e0b5507f",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/commercial-follow-up/index.html",
+      "bytes": 1670,
+      "sha256": "c2fae028f077119bd43e8f98e292ae2fd7b35f5cdbafb04e3095e4c1febcf308",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/document-review/index.html",
+      "bytes": 1667,
+      "sha256": "32d37870e138aca04a0112443aea75e3d19b44477ecc1fe7183de3129df78426",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/equipment-service/index.html",
+      "bytes": 1669,
+      "sha256": "6ca8cd38ca4a06b8b69b45f484b4c36237e389a95d80428ecef725ad10542d23",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/index.html",
+      "bytes": 1647,
+      "sha256": "287bd0980bda5cb05b82cd47c45c2cae3757b66736029796f308a9884c00e96e",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/inventory-availability/index.html",
+      "bytes": 1676,
+      "sha256": "fb5a954c53d85199c43361225fb91cfe61013ea4e306d0fc42e6df255eec6268",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/order-changes/index.html",
+      "bytes": 1662,
+      "sha256": "b86bd91457ff088cfdf877d08db5692c91b531908d90665dfc908bbef9c2c5f1",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/lab/receipt-reconciliation/index.html",
+      "bytes": 1665,
+      "sha256": "bafbed695290752fca12064f076296f7db609ff773d66641cd5fdb65c186baad",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/operations-product-design/index.html",
+      "bytes": 1693,
+      "sha256": "a8925673492e388c8d9e2022bcd2675ee8f8673498b216510b455e1b79ade4f3",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/order-operations/index.html",
+      "bytes": 1674,
+      "sha256": "74676b693675943de095b3bc218ca3fa14c63114702e00446f8a06a2f8386e3c",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/private-case-intake/index.html",
+      "bytes": 1683,
+      "sha256": "00dd8dbdac4484c1a830e7334328f5eedd0d08c367cd51e1109b957d15462ca6",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/en/transport-settlement/index.html",
+      "bytes": 1682,
+      "sha256": "ef09a3d4fc2a2e748fb1111b5682e397ab75194d269eb94e7e12fcc5660d9e61",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/expedientes/index.html",
+      "bytes": 1671,
+      "sha256": "f5947f8a82e741d06b0239030f646eec462b9f7a53708947696c99a5d3103b3a",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 1642,
+      "sha256": "defb969982c7a07e0b75db9a112aef406b099ed8cdccb4a29cd650fa6b25551b",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/conciliacion/index.html",
+      "bytes": 1660,
+      "sha256": "05d38cc387a78e9b53decfe390b4b04b95da070747b011f4648543b1c199531c",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/equipos/index.html",
+      "bytes": 1659,
+      "sha256": "fef522ca44fad3991297052cdfcbb244aa8dd5a55e94103bafba654523023e2d",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/expedientes/index.html",
+      "bytes": 1665,
+      "sha256": "435c764472107f3313ca9a80eff4c6c2865217ff697910320aa4d511854fb12d",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/index.html",
+      "bytes": 1653,
+      "sha256": "d0ea39fad4572211762c19552494768cbc1c93e26a759cc5f7bd3cbfaf4c7537",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/inventario/index.html",
+      "bytes": 1663,
+      "sha256": "28445faeb231cc6284bad9de115e4f430ee2835c48af811fbe52bd8deb7d51a2",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/pedidos/index.html",
+      "bytes": 1666,
+      "sha256": "6395e7f69724ad110fbf289a360d0ee6da7d39b8e6ef03ecee4311f464af7fbf",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/laboratorio/seguimiento-comercial/index.html",
+      "bytes": 1682,
+      "sha256": "9010959b508da510a9c289da4046de4ad31e5aa33fb932d7836871c0a5ccddf2",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/local-brief.mjs",
+      "bytes": 2184,
+      "sha256": "05be615e1356f8786e697f43e8413c9d91c6d0546b1f761331186c742d3491b3",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/models.mjs",
+      "bytes": 5952,
+      "sha256": "b6ebe0a2ad3d125a4654eb8e95e32ef6d80e9254e6ed0a457ee6a87064fefc58",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/operacion-comercial/index.html",
+      "bytes": 1684,
+      "sha256": "534986d42bdd6ac4755ff8c2f5b8538bb54a953e6df3fad0e0d1e4f3ff271296",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/pedidos/index.html",
+      "bytes": 1662,
+      "sha256": "22f9585da6edb9b24ae354b833f3b18257ebf70d8be9f5ba89354f63a1a5ed38",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/portal-de-pedidos/index.html",
+      "bytes": 1691,
+      "sha256": "2f9319c650e4bfffd101022f37677bc5ad6945f3e29053e086ab17413c1122e1",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/producto-financiero-operativo/index.html",
+      "bytes": 1699,
+      "sha256": "7e8f1dfccbf221676fc37ba2bcdc8fc12873dc11797a30429a1c0c23ceb057e8",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/public-interactions.mjs",
+      "bytes": 3437,
+      "sha256": "ccdd48b8f73e36295c5f59518ae065c5db1e4d2260d2eb46b6ff19a291cba40c",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/recepcion-de-casos/index.html",
+      "bytes": 1683,
+      "sha256": "0f08adf9e55c01699db57c5f5a22051b7e9b06765e77f6f340d16dbbeb42120e",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/revision-documental/index.html",
+      "bytes": 1684,
+      "sha256": "d72a1de78018a005732e4938592d8a6c4e2c91d5b4fa6b9b6418bd38aceb04e7",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/route-manifest.json",
+      "bytes": 5785,
+      "sha256": "09c229ebfcd734eec42c116cbe8b88672e34a49ce23ab5dcf31234d4a5ab2cc5",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/routes.mjs",
+      "bytes": 2625,
+      "sha256": "7cf20b7b94c6605e8cbe4e2625df124c0c3623d63c2076a3494cd488c3efadda",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/scenarios.mjs",
+      "bytes": 19927,
+      "sha256": "333ca19c56940a0caa7c9da4b616d68c7f29c7b4c7d89b7293f788ed9e12627d",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/showcase.mjs",
+      "bytes": 69983,
+      "sha256": "ae613e977bb12c1c123fca56788776ca291da48c2bd7a1c83e87211e343270f7",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/style.css",
+      "bytes": 13116,
+      "sha256": "c8d51440c6733cbbeda318e13068ba131828daecc92b28292178e5db97319f68",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/tienda-y-operacion/index.html",
+      "bytes": 1672,
+      "sha256": "012fb950e825770305c317171274b10f99f7b6519ef136e148128a0a0a2a5f47",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/transporte-y-liquidacion/index.html",
+      "bytes": 1681,
+      "sha256": "681338a370dbcce2281fdf91dcb4b133df07302394124bfd2af68e2765c86d39",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "dist/v38.css",
+      "bytes": 26361,
+      "sha256": "30bd47cdbfde8e35610907ad7ff6d99ed045dc55b8e08f3ee04c405d18b47848",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "docs/DEMONSTRATION.md",
+      "bytes": 6441,
+      "sha256": "7200454f7b2e2ecd4d96433283aeb4199e504ce0a92241cbfa10fbd760538dc9",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "docs/FIRST_WORKFLOW.md",
+      "bytes": 3586,
+      "sha256": "0d9c154931002b66b2db747595256538a237d8b019c290043a86d000cffe7b53",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "docs/V38_DEVELOPMENTS.md",
+      "bytes": 5227,
+      "sha256": "3bf83c4a867ce27c5de6b70aa586815dcbdaeb254f52e2c076753b472f05ea39",
+      "byte_identical_to_published_blob": false,
+      "derivation": "Public route guide updated to remove preparation-only coordination text and describe the completed public telemetry contract and honest case states."
+    },
+    {
+      "path": "scripts/prepare-routes.mjs",
+      "bytes": 1796,
+      "sha256": "6932c2c92478df1ec97c94160066707414cfe957adc2a2c731f064da2b34e3e4",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "scripts/preview-v38.mjs",
+      "bytes": 1632,
+      "sha256": "11fd49b043d0ebd569852ac3fd18e4c6dea43ad347acc916188333406627d570",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "scripts/validate-v38.mjs",
+      "bytes": 2471,
+      "sha256": "0d280cdcd4ed7505414fa9e7a977cd76c9918a7ef003d4c07a0d69354b9952e5",
+      "byte_identical_to_published_blob": false,
+      "derivation": "Removed a private nominal exclusion list from the public validator; generic credential/private-link and all route/asset/functional checks retained."
+    },
+    {
+      "path": "tests/brief.test.mjs",
+      "bytes": 5192,
+      "sha256": "809b13315a019fb04f2cf303be470ffd8a90d39551d4d5611eb057135a707399",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "tests/local-brief.test.mjs",
+      "bytes": 1201,
+      "sha256": "70f77d157d35463faacdb4bfbba3d6e6c3ba66e3a05440d168f2eb6c30d0b893",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "tests/models.test.mjs",
+      "bytes": 10417,
+      "sha256": "2f54e506ac4c073db89edf9303aead9f7c7f9b182cbbac92ded900ab17821678",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "tests/routes.test.mjs",
+      "bytes": 1696,
+      "sha256": "aabe3ff2172e0d519e77c13772e48eaaf5403680f393088f0350b28a639f7b6a",
+      "byte_identical_to_published_blob": true
+    },
+    {
+      "path": "tests/scenarios.test.mjs",
+      "bytes": 10038,
+      "sha256": "8c4e781c3d524ef7a7772492132f46059e9c208cf030949e660e04f234b9b31e",
+      "byte_identical_to_published_blob": true
+    }
+  ],
+  "additional_public_documentation": [
+    "README.md",
+    "docs/PUBLIC_SOURCE_INVENTORY.json"
+  ],
+  "rights": "All rights reserved; bundled font licences retained in their respective files."
+}
